@@ -2,6 +2,8 @@ const express = require('express');
 const multer = require('multer');
 const mysql = require('mysql2/promise');
 const cors = require('cors');
+const nodemailer = require('nodemailer');
+
 
 const app = express();
 app.use(cors());
@@ -109,6 +111,42 @@ app.put('/api/portfolio/:id', upload.single('image'), async (req, res) => {
 
 
 app.use('/uploads', express.static('uploads'));
+
+
+
+// Настройки транспорта для nodemailer, используйте SMTP-сервер или сервис типа Gmail
+const transporter = nodemailer.createTransport({
+  host: 'smtp.mail.ru', // SMTP сервер
+  port: 465,
+  secure: true, // true для порта 465, false для других портов
+  auth: {
+    user: 'samat.daniyal.00@mail.ru', // ваш e-mail
+    pass: 'fMzYeS72eSAwPhTXKkei' // ваш пароль
+  }
+});
+
+// Роут для отправки e-mail
+app.post('/send-email', upload.none(), (req, res) => {
+  const { name, email, message } = req.body;
+  console.log(req.body);
+
+  const mailOptions = {
+    from: 'samat.daniyal.00@mail.ru', // От кого
+    to: 'daniyal.samat.04@mail.ru', // Кому
+    subject: 'Portfolio', // Тема
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}` // Текст письма
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      return res.status(500).json({ error: 'Failed to send email' });
+    } else {
+      console.log('Email sent:', info.response);
+      return res.json({ message: 'Email sent successfully' });
+    }
+  });
+});
 
 
 

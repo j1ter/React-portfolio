@@ -11,6 +11,8 @@ import Resume from './components/Resume';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import AddPortfolioItem from './components/AddPortfolioItem'; // Убедитесь, что этот компонент импортирован
+import Price from './components/Price';
+import Contacts from './components/Contacts';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
                 <Resume />
                 <Portfolio />
                 <Skills />
+                <Price />
+                <Contacts />
               </>
             } />
             <Route path="/add" element={<AddPortfolioItem />} />
