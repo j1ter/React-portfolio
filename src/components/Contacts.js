@@ -57,7 +57,7 @@ const Contacts = () => {
       <div className="container">
         <div className="contacts__wrapper">
           <div className="contacts__photo">
-            <img src={MainPhoto} alt="photo" />
+            <img src={MainPhoto} alt="mainPhoto" />
           </div>
           <div className="contacts__descr">
             <h2 className="title title_fz16 contacts__title title_black">Контакты</h2>

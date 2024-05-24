@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Promo from './components/Promo';
-import Menu from './components/Menu';
 import Header from './components/Header';
 import About from './components/About';
 import Resume from './components/Resume';
@@ -20,7 +19,6 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Menu />
           <Routes>
             <Route path="/" element={
               <>

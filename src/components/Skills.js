@@ -1,4 +1,12 @@
 import React, { useEffect } from 'react';
+import html from '../icons/skills/html5.svg';
+import css3 from '../icons/skills/css3.svg';
+import JavaScript from '../icons/skills/js.svg';
+import jquery from '../icons/skills/jquery.svg';
+import react from '../icons/skills/react.svg';
+import node from '../icons/skills/node.js.svg';
+import postgresql from '../icons/skills/pgsql.svg';
+import php from '../icons/skills/php.svg';
 
 const Skills = () => {
   useEffect(() => {
@@ -18,24 +26,44 @@ const Skills = () => {
         <div className="divider"></div>
         <div className="skills__items">
           <div className="skills__item">
-            <img src="/icons/skills/html5.svg" alt="html5" className="skills__item-img"/>
+            <img src={html} alt="html5" className="skills__item-img"/>
             <h3 className="title title_fz14 title_black">HTML5</h3>
             <p>Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта.</p>
           </div>
           <div className="skills__item">
-            <img src="/icons/skills/css3.svg" alt="css3" className="skills__item-img"/>
+            <img src={css3} alt="css3" className="skills__item-img"/>
             <h3 className="title title_fz14 title_black">CSS3</h3>
             <p>Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</p>
           </div>
           <div className="skills__item">
-            <img src="/icons/skills/js.svg" alt="JavaScript" className="skills__item-img"/>
+            <img src={JavaScript} alt="JavaScript" className="skills__item-img"/>
             <h3 className="title title_fz14 title_black">JavaScript</h3>
             <p>Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое.</p>
           </div>
           <div className="skills__item">
-            <img src="/icons/skills/react.svg" alt="React" className="skills__item-img"/>
+            <img src={jquery} alt="jquery" className="skills__item-img"/>
+            <h3 className="title title_fz14 title_black">Jquery</h3>
+            <p>Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</p>
+          </div>
+          <div className="skills__item">
+            <img src={react} alt="React" className="skills__item-img"/>
             <h3 className="title title_fz14 title_black">React</h3>
             <p>Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели.</p>
+          </div>
+          <div className="skills__item">
+            <img src={node} alt="node" className="skills__item-img"/>
+            <h3 className="title title_fz14 title_black">Node.js</h3>
+            <p>Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит</p>
+          </div>
+          <div className="skills__item">
+            <img src={postgresql} alt="postgresql" className="skills__item-img"/>
+            <h3 className="title title_fz14 title_black">PostgreSQL</h3>
+            <p>Свободная объектно-реляционная система управления базами данных.</p>
+          </div>
+          <div className="skills__item">
+            <img src={php} alt="php" className="skills__item-img"/>
+            <h3 className="title title_fz14 title_black">PHP</h3>
+            <p>C-подобный скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений.</p>
           </div>
         </div>
         <div className="skills__ratings">

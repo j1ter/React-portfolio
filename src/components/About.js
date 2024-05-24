@@ -1,13 +1,14 @@
 import React from 'react';
 import mainPhoto from '../img/main_photo.png';
 import webDevelopment from '../icons/about_me/web_development.svg';
+import design from '../icons/about_me/design.svg';
 
 const About = () => (
   <section className="about" id="about">
     <div className="container">
       <div className="about__wrapper">
         <div className="about__photo">
-          <img src={mainPhoto} alt="photo" />
+          <img src={mainPhoto} alt="mainPhoto" />
         </div>
         <div className="about__descr">
           <h2 className="title title_fz16 about__title title_black">Про меня</h2>
@@ -29,7 +30,7 @@ const About = () => (
           </div>
           <div className="about__skills-item">
             <div className="about__skills-circle">
-              <img src="../icons/about_me/design.svg" alt="web-dev" />
+              <img src={design} alt="web-dev" />
             </div>
             <div>
               <div className="title title_fz14 title_black">Web-разработка</div>

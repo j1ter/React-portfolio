@@ -1,4 +1,8 @@
 import React from 'react';
+import developer from '../icons/experience/developer.svg';
+import courses from '../icons/experience/courses.svg';
+import university from '../icons/experience/university.svg';
+import designer from '../icons/experience/designer.svg';
 
 const Resume = () => (
   <section className="resume" id="resume">
@@ -14,7 +18,7 @@ const Resume = () => (
               <div className="resume__item">
                 <div className="resume__item-head">
                   <div className="resume__item-icon">
-                    <img src="/icons/experience/university.svg" alt="university" />
+                    <img src={university} alt="university" />
                   </div>
                   <h4 className="title title_fz14 title_black">Narxoz University</h4>
                   <div className="resume__item-location">Бакалавра | Алматы (2021-2025)</div>
@@ -26,7 +30,7 @@ const Resume = () => (
               <div className="resume__item">
                 <div className="resume__item-head">
                   <div className="resume__item-icon">
-                    <img src="/icons/experience/courses.svg" alt="university" />
+                    <img src={courses} alt="university" />
                   </div>
                   <h4 className="title title_fz14 title_black">Udemy</h4>
                   <div className="resume__item-location">Курсы по Web-разработке </div>
@@ -43,7 +47,7 @@ const Resume = () => (
               <div className="resume__item">
                 <div className="resume__item-head">
                   <div className="resume__item-icon">
-                    <img src="/icons/experience/developer.svg" alt="university" />
+                    <img src={developer} alt="university" />
                   </div>
                   <h4 className="title title_fz14 title_black">Front-End Developer</h4>
                   <div className="resume__item-location">Pet-projects (2022-2024)</div>
@@ -55,7 +59,7 @@ const Resume = () => (
               <div className="resume__item">
                 <div className="resume__item-head">
                   <div className="resume__item-icon">
-                    <img src="/icons/experience/designer.svg" alt="university" />
+                    <img src={designer} alt="university" />
                   </div>
                   <h4 className="title title_fz14 title_black">UI/UX Designer</h4>
                   <div className="resume__item-location">Pet-project (2023)</div>
